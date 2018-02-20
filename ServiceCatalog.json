@@ -1,0 +1,10 @@
+{ "if": { "not": { "anyOf": [
+{
+	"source":"action",
+	"like": "Microsoft.Resources/*"
+},
+{
+	"source":"action",
+	"like": "Microsoft.Compute/*"
+}
+ ] } }, "then": { "effect": "deny" } }

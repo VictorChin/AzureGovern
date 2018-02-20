@@ -1,0 +1,4 @@
+{ "if": { "allOf": [ { 
+"source": "action",
+"equals": "Microsoft.Network/expressRouteCircuits/write"
+} ] }, "then": { "effect": "deny" } }
