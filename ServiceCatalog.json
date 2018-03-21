@@ -1,10 +1,77 @@
-{ "if": { "not": { "anyOf": [
 {
-	"source":"action",
-	"like": "Microsoft.Resources/*"
-},
-{
-	"source":"action",
-	"like": "Microsoft.Compute/*"
+
+  "if": {
+
+    "not": {
+
+      "anyOf": [
+        {
+
+          "source": "action",
+
+          "like": "Microsoft.Resources/*"
+
+        },
+        {
+
+          "source": "action",
+
+          "like": "Microsoft.Compute/*"
+
+        },
+        {
+
+          "source": "action",
+
+          "like": "Microsoft.Network/expressRouteCircuit"
+
+        },
+        {
+          "source": "action",
+          "like": "Microsoft.Network/virtualNetworks"
+        },
+        {
+          "source": "action",
+          "like": "Microsoft.Network/virtualNetworkGateways"
+        },
+        {
+          "source": "action",
+          "like": "Microsoft.Storage/*"
+        },
+        {
+          "source": "action",
+          "like": "Microsoft.RecoveryServices/*"
+        },
+        {
+          "source": "action",
+          "like": "Microsoft.DevTestLab/*"
+        },
+        {
+          "source": "action",
+          "like": "Microsoft.KeyVault/*"
+        },
+        {
+          "source": "action",
+          "like": "Microsoft.DevTestLab/*"
+        },
+        {
+          "source": "action",
+          "like": "Microsoft.Web/*"
+        },
+        {
+          "source": "action",
+          "like": "Microsoft.Sql/*"
+        }
+      ]
+
+    }
+
+  },
+
+  "then": {
+
+    "effect": "deny"
+
+  }
+
 }
- ] } }, "then": { "effect": "deny" } }
