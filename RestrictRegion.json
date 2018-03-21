@@ -1,1 +1,17 @@
-{ "if": { "not": { "field": "location","in": [ "westus", "westus2"]} }, "then": { "effect": "deny" } }
+{
+
+  "if": {
+
+    "not": {
+      "field": "location",
+      "in": [ "eastus", "eastus2" ]
+    }
+  },
+
+  "then": {
+
+    "effect": "deny"
+
+  }
+
+}
